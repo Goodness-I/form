@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+      integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../base.css" />
+    <link rel="stylesheet" href="./SignUp.css" />
+  </head>
+  <body>
+    <div class="container landing-page">
+      <div class="back">
+        <a href="../LandingPage.html" class="back"
+          ><i class="fas fa-chevron-left"></i> Back</a
+        >
+      </div>
+      <div class="get-started container">
+        <div class="signUp">
+          <div class="sign-up-content">
+            <h1>Get Started</h1>
+          </div>
+          <div class="form-container">
+            <form action="POST" class="sign-up-form">
+              <div class="input">
+                <label for="Full Name">Full Name</label>
+                <input
+                  type="text"
+                  name="Full Name"
+                  id="Full Name"
+                  class="input-fields"
+                  required
+                  placeholder="Enter Full Name"
+                  autocomplete="name"
+                />
+              </div>
+              <div class="input">
+                <label for="email">Email</label>
+                <input
+                  input-fields
+                  type="email"
+                  name="email"
+                  id="email"
+                  required
+                  placeholder="Enter Password"
+                  autocomplete="email"
+                />
+              </div>
+              <div class="input">
+                <label for="password">Password</label>
+                <input
+                  type="password"
+                  name="password"
+                  id="password"
+                  class="input-fields"
+                  required
+                  placeholder="Enter Password"
+                  autocomplete="new-password"
+                />
+              </div>
+            </form>
+
+            <div class="agreement">
+              <div class="checkbox">
+                <input
+                  type="checkbox"
+                  name="checkbox"
+                  id="checkbox"
+                  class="checkbox"
+                />
+              </div>
+              <div class="agree">
+                <label for="checkbox" class="check-box-label"
+                  >I agree to the processing of
+                  <a href=""><span class="blue">Personal data</span></a>
+                </label>
+              </div>
+            </div>
+            <div class="form-sign-up-button">
+              <a class="btn-sign-up" href="../sign-up/SignUp.html">Sign Up</a>
+            </div>
+
+            <div class="footer">
+              <div class="content-box">
+                <hr />
+                <p class="content-title">Sign up with</p>
+              </div>
+              <div class="icons">
+                <a href=""><i class="fab fa-facebook"></i></a>
+                <a href=""><i class="fab fa-twitter"></i></a>
+                <a href=""><i class="fab fa-google"></i></a>
+                <a href=""><i class="fab fa-apple"></i></a>
+              </div>
+
+              <div class="account">
+                <p class="account-footer">
+                  Already have an account?
+                  <a href="../sign-in/SignIn.html"
+                    ><span class="blue">Sign in</span></a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

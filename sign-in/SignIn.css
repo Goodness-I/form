@@ -1,0 +1,337 @@
+body {
+  font-size: 1.5rem;
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.5;
+  position: relative;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  padding: 1rem;
+}
+
+button {
+  padding: 1rem;
+  margin: 2rem;
+  border: 0;
+  outline: none;
+  transform: translateY(0);
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    color 0.2s ease;
+  text-wrap: wrap;
+  border-radius: 1rem;
+}
+
+button:hover {
+  background: #5b5fef;
+  color: #fff;
+  border-radius: 2rem;
+  transform: translateY(0.4rem);
+}
+
+button:hover a {
+  color: #fff;
+}
+
+.nav-back {
+  display: flex;
+  width: 100%;
+  padding-top: clamp(2rem, 5vh, 5rem);
+  padding-left: 1rem;
+}
+
+.back {
+  color: #fff;
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.2rem;
+  font-size: clamp(1.5rem, 1.5vw, 1.8rem);
+}
+
+.welcome-back {
+  width: 100%;
+  height: fit-content;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  max-height: 100svh;
+  overflow-y: auto;
+  margin-bottom: 0;
+  animation: slideUp 0.8s ease-out;
+}
+
+.signInContainer {
+  width: 100%;
+  min-height: 100svh;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  position: relative;
+  background-image: url("./img/bubble-bg.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow-y: auto;
+}
+
+.signIn {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 2rem 1rem;
+  background: #fff;
+  border-radius: 1rem 1rem 0 0;
+}
+
+.sign-in-content {
+  text-align: center;
+  color: #5b5fef;
+  text-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.sign-in-form {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 1px;
+}
+
+input {
+  padding: 1rem;
+  padding: 1.5rem;
+  border: 0.5px solid #dfdfdf;
+  border-radius: 8px;
+}
+
+input:is(:hover, :focus) {
+  background-color: #e6f0ff;
+  outline-offset: 2px;
+}
+
+.flex-container {
+  display: flex;
+  width: calc(100% - 2rem);
+  padding: 0.5rem;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem 1rem;
+}
+
+.input-checkbox {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+}
+
+.forgot {
+  color: #3c66cc;
+  font-weight: 500;
+}
+
+.check-box-label {
+  margin-left: 1rem;
+}
+
+.blue {
+  color: #3c66cc;
+  font-weight: 500;
+  margin-left: -15px;
+}
+
+.form-sign-in-button a {
+  display: block;
+  text-decoration: none;
+  background-color: #3c66cc;
+  color: #fff;
+  text-align: center;
+  padding: 0.75rem 1rem;
+  font-size: 1.6rem;
+}
+
+.form-sign-in-button {
+  width: 100%;
+}
+
+.btn-sign-in {
+  width: 100%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  background-color: #3c66cc;
+  display: block;
+  text-align: center;
+  padding: 0.75rem 1rem;
+  margin: 1rem 0;
+  border-radius: 1rem;
+}
+
+.content-box {
+  position: relative;
+  text-align: center;
+  margin: 4rem 0;
+}
+
+.content-box hr {
+  border: none;
+  border-top: 1px solid #dfdfdf;
+}
+
+.content-box .content-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  line-height: 1.2;
+  color: #666;
+  margin: 0;
+  padding: 0 1rem;
+  white-space: wrap;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.footer {
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 0rem 1rem 4rem;
+  margin: 0;
+  color: #666;
+}
+
+@media screen and (min-width: 768px) {
+  .signIn {
+    width: min(82%, 62rem);
+    min-height: 68svh;
+    margin: 0 auto;
+    padding: 4rem 3rem 2rem;
+  }
+
+  .sign-in-content h1 {
+    font-size: 3.2rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .welcome-back {
+    margin-bottom: 0;
+  }
+
+  .signIn {
+    width: 100%;
+    max-width: 60rem;
+    min-height: 0;
+    max-height: calc(100svh - 6rem);
+    overflow-y: auto;
+    padding: 2rem 3rem 1rem;
+    border-radius: 1rem 1rem 0 0;
+  }
+
+  .sign-in-content {
+    margin-bottom: 0.5rem;
+  }
+
+  .sign-in-content h1 {
+    font-size: clamp(3.8rem, 3.5vw, 4.8rem);
+  }
+
+  .sign-in-form {
+    gap: 0.5rem;
+    font-size: 1.5rem;
+  }
+
+  .sign-in-form input {
+    font-size: 1.6rem;
+  }
+
+  .content-box {
+    margin: 2rem 0;
+  }
+
+  .footer {
+    padding-bottom: 1.5rem;
+  }
+
+  .btn-sign-in {
+    padding: 0.75rem 1rem;
+    margin: 1rem 0;
+  }
+
+  .form-sign-in-button a {
+    padding: 0.75rem 1rem;
+    font-size: 1.6rem;
+  }
+
+  .form-sign-in-button {
+    max-width: 48rem;
+    margin: 0 auto;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .nav-back {
+    padding-top: 1.5rem;
+    padding-left: 1rem;
+  }
+
+  .signIn {
+    padding: 2rem 1rem 0.5rem;
+  }
+
+  .sign-in-content h1 {
+    font-size: 2.4rem;
+  }
+
+  .content-box {
+    margin: 2.5rem 0;
+  }
+
+  .flex-container {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .forgot {
+    margin-left: 0;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 767px) {
+  .signIn {
+    width: min(90%, 62rem);
+    margin: 0 auto;
+    padding: 3rem 2rem 1rem;
+  }
+
+  .sign-in-content h1 {
+    font-size: 2.8rem;
+  }
+
+  .content-box {
+    margin: 3rem 0;
+  }
+}

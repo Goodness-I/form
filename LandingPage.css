@@ -1,0 +1,135 @@
+body {
+  margin: 0;
+  font-size: 1.6rem;
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.2;
+  color: #fff;
+}
+
+.landing-page {
+  width: 100%;
+  min-height: 100svh;
+  background-image: url("./img/bubble-bg.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.hero-content {
+  width: 100%;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  padding: 0 2rem 2rem;
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+  padding: 2rem;
+  font-family: "Montserrat", sans-serif;
+}
+button {
+  padding: 4rem;
+  border: 0;
+  outline: none;
+  transform: translateY(0);
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.sign-in,
+.btn-sign-up {
+  outline: none;
+  border: none;
+}
+.signing {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  font-size: 2rem;
+  position: absolute;
+  left: -2rem;
+  bottom: 0;
+  width: calc(100% + 4rem);
+}
+
+.signing a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  padding: 4rem 2rem;
+}
+
+.sign-in {
+  background: none;
+  color: #fff;
+  flex: 1;
+}
+
+.sign-in a {
+  color: #fff;
+}
+
+.sign-up {
+  background: #fff;
+  font-size: 2rem;
+  flex: 1;
+  border-radius: 2rem 0 0 0;
+}
+
+.sign-up a {
+  color: #5b5fef;
+}
+
+.content {
+  color: #fff;
+  text-align: center;
+  text-wrap: wrap;
+}
+
+.content h1 {
+  margin-top: clamp(12rem, 35vh, 25rem);
+}
+
+.content p {
+  text-wrap: wrap;
+  padding: 2rem;
+  font-size: 1.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .content {
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .landing-page {
+    background-image: url("./sign-up/img/bubble-bg-1080x2160.webp");
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .content {
+    margin-left: -12rem;
+    margin-right: -12rem;
+  }
+
+  .signing {
+    width: 100%;
+  }
+
+  .sign-in {
+    border: none;
+  }
+
+  .sign-up {
+    border-radius: 2rem 0 0 0;
+  }
+}

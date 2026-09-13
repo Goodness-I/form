@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign In</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+      integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../base.css" />
+    <link rel="stylesheet" href="./SignIn.css" />
+  </head>
+  <body>
+    <div class="signInContainer">
+      <div class="nav-back">
+        <a href="../LandingPage.html" class="back"
+          ><i class="fas fa-chevron-left"></i> Back</a
+        >
+      </div>
+      <div class="welcome-back">
+        <div class="signIn">
+          <div class="sign-in-content">
+            <h1>Welcome back</h1>
+          </div>
+          <div class="form-container">
+            <form action="POST" class="sign-in-form">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                required
+                placeholder="Enter Password"
+              />
+              <label for="password">Password</label>
+              <input
+                type="password"
+                name="password"
+                id="password"
+                required
+                placeholder="Enter Password"
+              />
+            </form>
+
+            <div class="flex-container content">
+              <div class="input-checkbox">
+                <input
+                  type="checkbox"
+                  name="checkbox"
+                  id="checkbox"
+                  class="checkbox"
+                />
+                <label for="checkbox" class="check-box-label"
+                  >Remember me
+                </label>
+              </div>
+              <p class="forgot">Forgot password</p>
+            </div>
+            <div class="form-sign-in-button">
+              <a class="btn-sign-in" href="../sign-in/">Sign in</a>
+            </div>
+
+            <div class="content-box">
+              <hr />
+              <p class="content-title">Sign in with</p>
+            </div>
+            <div class="icons">
+              <a href=""><i class="fab fa-facebook"></i></a>
+              <a href=""><i class="fab fa-twitter"></i></a>
+              <a href=""><i class="fab fa-google"></i></a>
+              <a href=""><i class="fab fa-apple"></i></a>
+            </div>
+
+            <p class="footer">
+              Don't have an account?
+              <a href="../sign-up/SignUp.html"
+                ><span class="blue"> &nbsp;Sign up</span></a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
