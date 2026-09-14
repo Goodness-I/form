@@ -6,7 +6,7 @@ body {
 
 .landing-page {
   width: 100%;
-  min-height: 100svh;
+  height: 100vh;
   background-image: url("./img/bubble-bg.webp");
   background-size: cover;
   background-position: center;
@@ -108,7 +108,8 @@ button {
 
 @media screen and (min-width: 1024px) {
   .landing-page {
-    background-image: url("./sign-up/img/bubble-bg-1080x2160.webp");
+    /* background-image: url("./img/bubble-bg.webp"); */
+
     display: flex;
     flex-direction: column;
     align-items: center;

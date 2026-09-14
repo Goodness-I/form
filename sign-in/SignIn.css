@@ -157,6 +157,21 @@ input:is(:hover, :focus) {
   border-radius: 1rem;
 }
 
+
+@media screen and (max-width: 199px) {
+  .flex-container {
+    flex-wrap: wrap;
+    row-gap: 0.25rem;
+  }
+  
+  .forgot {
+    flex: 0 0 100%;
+    width: 100%;
+    margin-left: 0;
+    text-align: right;
+  }
+}
+
 @media screen and (max-width: 599px) {
   .nav-back {
     padding-top: 1.5rem;
@@ -174,20 +189,6 @@ input:is(:hover, :focus) {
   .flex-container {
     align-items: center;
     gap: clamp(0.5rem, 3vw, 1rem);
-  }
-}
-
-@media screen and (max-width: 199px) {
-  .flex-container {
-    flex-wrap: wrap;
-    row-gap: 0.25rem;
-  }
-
-  .forgot {
-    flex: 0 0 100%;
-    width: 100%;
-    margin-left: 0;
-    text-align: right;
   }
 }
 
