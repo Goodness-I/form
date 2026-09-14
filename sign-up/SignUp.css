@@ -25,10 +25,22 @@ a {
   justify-content: space-between;
 }
 
+.nav-back {
+  display: flex;
+  width: 100%;
+  padding-top: clamp(2rem, 5vh, 5rem);
+  padding-left: 1rem;
+}
+
 .back {
   color: #fff;
-  margin: 2rem 1rem;
-  font-size: 1.3rem;
+  width: fit-content;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.2rem;
+  font-size: clamp(1.5rem, 1.5vw, 1.8rem);
 }
 
 .get-started {
@@ -191,8 +203,14 @@ input:focus {
 }
 
 @media screen and (max-width: 599px) {
-  .back {
-    margin: 1.5rem 1.5rem;
+  .get-started {
+    margin-top: 0;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-height: 100svh;
+    overflow-y: auto;
   }
 
   .signUp {
@@ -228,11 +246,6 @@ input:focus {
 }
 
 @media screen and (min-width: 768px) {
-  .back {
-    margin: 2rem 0 2rem 1rem;
-    font-size: 1.6rem;
-  }
-
   .signUp {
     width: 100%;
     max-width: 60rem;
