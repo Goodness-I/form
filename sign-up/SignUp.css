@@ -1,15 +1,11 @@
+/* Sign-up page typography and scroll behavior. */
 body {
-  margin: 0;
   font-size: 1.5rem;
-  font-family: "Montserrat", sans-serif;
   position: relative;
   overflow-x: hidden;
 }
 
-a {
-  text-decoration: none;
-}
-
+/* Sign-up page background and card layout. */
 .landing-page {
   width: 100%;
   min-height: 100vh;
@@ -25,30 +21,11 @@ a {
   justify-content: space-between;
 }
 
-.nav-back {
-  display: flex;
-  width: 100%;
-  padding-top: clamp(2rem, 5vh, 5rem);
-  padding-left: 1rem;
-}
-
-.back {
-  color: #fff;
-  width: fit-content;
-  padding: 1rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.2rem;
-  font-size: clamp(1.5rem, 1.5vw, 1.8rem);
-}
-
 .get-started {
   width: 100%;
   margin-top: auto;
   animation: slideUp 0.6s ease-out;
   height: auto;
-  bottom: 0;
 }
 
 .signUp {
@@ -62,7 +39,7 @@ a {
 }
 
 .sign-up-content h1 {
-  color: #5b5fef;
+  color: var(--color-accent);
   text-align: center;
   font-weight: bold;
   font-size: 1.8rem;
@@ -84,21 +61,29 @@ a {
 
 .input-fields {
   font-size: 1.3rem;
-  color: #666;
+  color: #333;
+  font-weight: 500;
 }
 
 .input label {
   padding: 0.5rem 0;
+  color: #333;
+  font-weight: 500;
 }
 
 input {
   padding: 1rem;
   border-radius: 10px;
-  border: 0.5px solid #dfdfdf;
+  border: 0.5px solid var(--color-border);
+}
+
+.input-fields::placeholder {
+  color: var(--color-muted);
+  font-weight: 400;
 }
 
 input:focus {
-  background-color: #e6f0ff;
+  background-color: var(--color-focus);
   outline-offset: 2px;
   outline: none;
 }
@@ -112,16 +97,20 @@ input:focus {
   gap: 0.75rem;
   margin: 1.5rem auto;
   font-size: 1.3rem;
-  color: #666;
+  color: var(--color-muted);
   line-height: 1.4;
 }
 
 .agreement .checkbox {
   flex: 0 0 auto;
+  display: flex;
+  align-items: center;
 }
 
 .agree {
   flex: 1;
+  display: flex;
+  align-items: center;
 }
 
 .btn-sign-up {
@@ -135,71 +124,13 @@ input:focus {
   cursor: pointer;
   border: none;
   border-radius: 1.2rem;
-  background-color: #3c66cc;
+  background-color: var(--color-primary);
 }
 
-.form-sign-up-button a {
+.form-sign-up-button button {
   display: block;
   color: #fff;
   text-align: center;
-}
-
-.content-box {
-  position: relative;
-  margin: 2rem 0;
-  text-align: center;
-  font-size: 1.3rem;
-}
-
-.content-box hr {
-  border: none;
-  border-top: 1px solid #ddd;
-}
-
-.content-title {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: #fff;
-  padding: 0 1rem;
-  margin: 0;
-  color: #666;
-  line-height: 2;
-  white-space: nowrap;
-}
-
-.blue {
-  color: #3c66cc;
-  font-weight: 600;
-}
-
-.icons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem 1rem;
-  font-size: 1.3rem;
-  gap: 2rem;
-}
-
-.account-footer {
-  text-align: center;
-  font-size: 1.3rem;
-  padding: 0.5rem 2rem 1.5rem;
-  margin: 0;
-  color: #666;
-}
-
-@keyframes slideUp {
-  from {
-    transform: translateY(100px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
 }
 
 @media screen and (max-width: 599px) {
@@ -247,9 +178,6 @@ input:focus {
 
 @media screen and (min-width: 768px) {
   .signUp {
-    width: 100%;
-    max-width: 60rem;
-    min-height: 0;
     margin: 2rem auto;
     padding: 3rem 3rem;
   }
@@ -273,14 +201,11 @@ input:focus {
 
   .btn-sign-up {
     margin: 1.5rem 0;
-    width: 100%;
-    max-width: 60rem;
     padding: 1.25rem 2rem;
     font-size: 1.6rem;
   }
 
-  .icons,
-  .account-footer {
+  .icons {
     font-size: 1.6rem;
   }
 
@@ -291,20 +216,11 @@ input:focus {
 
 @media screen and (min-width: 1024px) {
   .signUp {
-    width: 100%;
-    max-width: 60rem;
-    min-height: 0;
     max-height: calc(100svh - 4rem);
     overflow-y: auto;
     margin: 2rem auto;
     padding: 3rem 3rem 2rem;
-    border-radius: 2rem;
   }
-
-  .sign-up-content h1 {
-    font-size: 4rem;
-  }
-
   .form-sign-up-button {
     width: 100%;
     max-width: 48rem;

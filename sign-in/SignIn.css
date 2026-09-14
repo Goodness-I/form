@@ -1,14 +1,8 @@
+/* Sign-in page typography and control defaults. */
 body {
   font-size: 1.5rem;
-  font-family: "Montserrat", sans-serif;
   line-height: 1.5;
   position: relative;
-  margin: 0;
-}
-
-a {
-  text-decoration: none;
-  padding: 1rem;
 }
 
 button {
@@ -26,7 +20,7 @@ button {
 }
 
 button:hover {
-  background: #5b5fef;
+  background: var(--color-accent);
   color: #fff;
   border-radius: 2rem;
   transform: translateY(0.4rem);
@@ -34,23 +28,6 @@ button:hover {
 
 button:hover a {
   color: #fff;
-}
-
-.nav-back {
-  display: flex;
-  width: 100%;
-  padding-top: clamp(2rem, 5vh, 5rem);
-  padding-left: 1rem;
-}
-
-.back {
-  color: #fff;
-  width: fit-content;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.2rem;
-  font-size: clamp(1.5rem, 1.5vw, 1.8rem);
 }
 
 .welcome-back {
@@ -104,53 +81,60 @@ button:hover a {
 }
 
 input {
-  padding: 1rem;
   padding: 1.5rem;
-  border: 0.5px solid #dfdfdf;
+  border: 0.5px solid var(--color-border);
   border-radius: 8px;
 }
 
 input:is(:hover, :focus) {
-  background-color: #e6f0ff;
+  background-color: var(--color-focus);
   outline-offset: 2px;
 }
 
 .flex-container {
   display: flex;
-  width: calc(100% - 2rem);
+  width: 100%;
+  box-sizing: border-box;
   padding: 0.5rem;
   margin: 0 auto;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 0.75rem 1rem;
+  flex-wrap: nowrap;
+  gap: clamp(0.25rem, 2vw, 1rem);
+  font-size: clamp(1.2rem, 3.8vw, 1.5rem);
 }
 
 .input-checkbox {
   display: flex;
   align-items: center;
-  min-width: 0;
+  flex: 0 1 auto;
+  min-width: max-content;
+}
+
+.input-checkbox .checkbox {
+  flex: 0 0 auto;
+  width: auto;
+  padding: 0;
 }
 
 .forgot {
-  color: #3c66cc;
+  color: var(--color-primary);
   font-weight: 500;
+  flex: 0 0 auto;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
 }
 
 .check-box-label {
-  margin-left: 1rem;
+  margin-left: clamp(0.25rem, 2vw, 1rem);
+  white-space: nowrap;
 }
 
-.blue {
-  color: #3c66cc;
-  font-weight: 500;
-  margin-left: -15px;
-}
-
-.form-sign-in-button a {
+.form-sign-in-button button {
   display: block;
   text-decoration: none;
-  background-color: #3c66cc;
+  background-color: var(--color-primary);
   color: #fff;
   text-align: center;
   padding: 0.75rem 1rem;
@@ -165,7 +149,7 @@ input:is(:hover, :focus) {
   width: 100%;
   font-size: 1.2rem;
   cursor: pointer;
-  background-color: #3c66cc;
+  background-color: var(--color-primary);
   display: block;
   text-align: center;
   padding: 0.75rem 1rem;
@@ -173,43 +157,50 @@ input:is(:hover, :focus) {
   border-radius: 1rem;
 }
 
-.content-box {
-  position: relative;
-  text-align: center;
-  margin: 4rem 0;
+@media screen and (max-width: 599px) {
+  .nav-back {
+    padding-top: 1.5rem;
+    padding-left: 1rem;
+  }
+
+  .signIn {
+    padding: 2rem 1rem 0.5rem;
+  }
+
+  .sign-in-content h1 {
+    font-size: 2.4rem;
+  }
+
+  .flex-container {
+    align-items: center;
+    gap: clamp(0.5rem, 3vw, 1rem);
+  }
 }
 
-.content-box hr {
-  border: none;
-  border-top: 1px solid #dfdfdf;
+@media screen and (max-width: 199px) {
+  .flex-container {
+    flex-wrap: wrap;
+    row-gap: 0.25rem;
+  }
+
+  .forgot {
+    flex: 0 0 100%;
+    width: 100%;
+    margin-left: 0;
+    text-align: right;
+  }
 }
 
-.content-box .content-title {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: #fff;
-  line-height: 1.2;
-  color: #666;
-  margin: 0;
-  padding: 0 1rem;
-  white-space: wrap;
-}
+@media screen and (min-width: 600px) and (max-width: 767px) {
+  .signIn {
+    width: min(90%, 62rem);
+    margin: 0 auto;
+    padding: 3rem 2rem 1rem;
+  }
 
-.icons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
-}
-
-.footer {
-  text-align: center;
-  font-size: 1.5rem;
-  padding: 0rem 1rem 4rem;
-  margin: 0;
-  color: #666;
+  .sign-in-content h1 {
+    font-size: 2.8rem;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -235,7 +226,6 @@ input:is(:hover, :focus) {
     max-width: 60rem;
     min-height: 0;
     max-height: calc(100svh - 6rem);
-    overflow-y: auto;
     padding: 2rem 3rem 1rem;
     border-radius: 1rem 1rem 0 0;
   }
@@ -257,20 +247,12 @@ input:is(:hover, :focus) {
     font-size: 1.6rem;
   }
 
-  .content-box {
-    margin: 2rem 0;
-  }
-
-  .footer {
-    padding-bottom: 1.5rem;
-  }
-
   .btn-sign-in {
     padding: 0.75rem 1rem;
     margin: 1rem 0;
   }
 
-  .form-sign-in-button a {
+  .form-sign-in-button button {
     padding: 0.75rem 1rem;
     font-size: 1.6rem;
   }
@@ -278,60 +260,5 @@ input:is(:hover, :focus) {
   .form-sign-in-button {
     max-width: 48rem;
     margin: 0 auto;
-  }
-}
-
-@keyframes slideUp {
-  from {
-    transform: translateY(100px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-@media screen and (max-width: 599px) {
-  .nav-back {
-    padding-top: 1.5rem;
-    padding-left: 1rem;
-  }
-
-  .signIn {
-    padding: 2rem 1rem 0.5rem;
-  }
-
-  .sign-in-content h1 {
-    font-size: 2.4rem;
-  }
-
-  .content-box {
-    margin: 2.5rem 0;
-  }
-
-  .flex-container {
-    align-items: flex-start;
-    flex-direction: column;
-  }
-
-  .forgot {
-    margin-left: 0;
-  }
-}
-
-@media screen and (min-width: 600px) and (max-width: 767px) {
-  .signIn {
-    width: min(90%, 62rem);
-    margin: 0 auto;
-    padding: 3rem 2rem 1rem;
-  }
-
-  .sign-in-content h1 {
-    font-size: 2.8rem;
-  }
-
-  .content-box {
-    margin: 3rem 0;
   }
 }

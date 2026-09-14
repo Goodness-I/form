@@ -16,6 +16,7 @@
   </head>
   <body>
     <div class="signInContainer">
+      <!-- Return navigation to the landing page. -->
       <div class="nav-back">
         <a href="../index.html" class="back"
           ><i class="fas fa-chevron-left"></i> Back</a
@@ -23,18 +24,19 @@
       </div>
       <div class="welcome-back">
         <div class="signIn">
+          <!-- Sign-in form and account recovery controls. -->
           <div class="sign-in-content">
             <h1>Welcome back</h1>
           </div>
           <div class="form-container">
-            <form action="POST" class="sign-in-form">
+            <form method="post" class="sign-in-form">
               <label for="email">Email</label>
               <input
                 type="email"
                 name="email"
                 id="email"
                 required
-                placeholder="Enter Password"
+                placeholder="Enter Email"
               />
               <label for="password">Password</label>
               <input
@@ -44,7 +46,6 @@
                 required
                 placeholder="Enter Password"
               />
-            </form>
 
             <div class="flex-container content">
               <div class="input-checkbox">
@@ -58,12 +59,14 @@
                   >Remember me
                 </label>
               </div>
-              <p class="forgot">Forgot password</p>
+              <a class="forgot" href="#">Forgot password</a>
             </div>
             <div class="form-sign-in-button">
-              <a class="btn-sign-in" href="../sign-in/">Sign in</a>
+              <button type="submit" class="btn-sign-in">Sign in</button>
             </div>
+            </form>
 
+            <!-- Alternative sign-in methods and account registration link. -->
             <div class="content-box">
               <hr />
               <p class="content-title">Sign in with</p>
@@ -77,8 +80,8 @@
 
             <p class="footer">
               Don't have an account?
-              <a href="../sign-up/index.html"
-                ><span class="blue"> &nbsp;Sign up</span></a
+              <a class="blue-link" href="../sign-up/index.html"
+                ><span class="blue">Sign up</span></a
               >
             </p>
           </div>

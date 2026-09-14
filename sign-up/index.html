@@ -16,6 +16,7 @@
   </head>
   <body>
     <div class="container landing-page">
+      <!-- Return navigation to the landing page. -->
       <div class="nav-back">
         <a href="../index.html" class="back"
           ><i class="fas fa-chevron-left"></i> Back</a
@@ -23,17 +24,18 @@
       </div>
       <div class="get-started container">
         <div class="signUp">
+          <!-- Account creation form and agreement controls. -->
           <div class="sign-up-content">
             <h1>Get Started</h1>
           </div>
           <div class="form-container">
-            <form action="POST" class="sign-up-form">
+            <form method="post" class="sign-up-form">
               <div class="input">
-                <label for="Full Name">Full Name</label>
+                <label for="full-name">Full Name</label>
                 <input
                   type="text"
-                  name="Full Name"
-                  id="Full Name"
+                  name="full_name"
+                  id="full-name"
                   class="input-fields"
                   required
                   placeholder="Enter Full Name"
@@ -43,12 +45,12 @@
               <div class="input">
                 <label for="email">Email</label>
                 <input
-                  input-fields
                   type="email"
                   name="email"
                   id="email"
                   required
-                  placeholder="Enter Password"
+                  class="input-fields"
+                  placeholder="Enter Email"
                   autocomplete="email"
                 />
               </div>
@@ -64,8 +66,6 @@
                   autocomplete="new-password"
                 />
               </div>
-            </form>
-
             <div class="agreement">
               <div class="checkbox">
                 <input
@@ -78,14 +78,18 @@
               <div class="agree">
                 <label for="checkbox" class="check-box-label"
                   >I agree to the processing of
-                  <a href=""><span class="blue"> Personal data</span></a>
+                  <a class="blue-link" href="#"
+                    ><span class="blue">Personal data</span></a
+                  >
                 </label>
               </div>
             </div>
             <div class="form-sign-up-button">
-              <a class="btn-sign-up" href="../sign-up/index.html">Sign Up</a>
+              <button type="submit" class="btn-sign-up">Sign Up</button>
             </div>
+            </form>
 
+            <!-- Alternative sign-up methods and existing-account link. -->
             <div class="footer">
               <div class="content-box">
                 <hr />
@@ -101,7 +105,7 @@
               <div class="account">
                 <p class="account-footer">
                   Already have an account?
-                  <a href="../sign-in/index.html"
+                  <a class="blue-link" href="../sign-in/index.html"
                     ><span class="blue">Sign in</span></a
                   >
                 </p>
