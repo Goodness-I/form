@@ -3,43 +3,32 @@ body {
   font-size: 1.5rem;
   position: relative;
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 /* Sign-up page background and card layout. */
-.landing-page {
-  width: 100%;
-  min-height: 100vh;
-  min-height: 100svh;
-  background-image: url("./img/bubble-bg.webp");
-  background-size: cover;
-  background-position: center top;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  overflow-y: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.get-started {
-  width: 100%;
-  margin-top: auto;
-  animation: slideUp 0.6s ease-out;
-  height: auto;
+.signUpContainer {
+  height: 100svh;
+  min-height: 0;
+  overflow: hidden;
 }
 
 .signUp {
-  background-color: #fff;
-  color: #333;
+  flex: 0 1 auto;
+  margin: 2rem auto 0;
+  height: auto;
   min-height: 0;
-  padding: 0.5rem 1rem 0;
-  border-top-left-radius: 2rem;
-  border-top-right-radius: 2rem;
-  margin-top: 1rem;
+  overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.signUp::-webkit-scrollbar {
+  display: none;
 }
 
 .sign-up-content h1 {
-  color: var(--color-accent);
+  color: var(--color-primary);
   text-align: center;
   font-weight: bold;
   font-size: 1.8rem;
@@ -134,18 +123,10 @@ input:focus {
 }
 
 @media screen and (max-width: 599px) {
-  .get-started {
-    margin-top: 0;
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    max-height: 100svh;
-    overflow-y: auto;
-  }
-
   .signUp {
     margin-top: 0;
+    position: relative;
+    max-height: none;
   }
 
   .form-container {
@@ -167,8 +148,6 @@ input:focus {
     width: 100%;
     max-width: 60rem;
     min-height: 0;
-    margin: 2rem auto 0;
-    padding: 2rem 3rem 2rem;
   }
 
   .sign-up-content h1 {
@@ -177,11 +156,6 @@ input:focus {
 }
 
 @media screen and (min-width: 768px) {
-  .signUp {
-    margin: 2rem auto;
-    padding: 3rem 3rem;
-  }
-
   .sign-up-content h1 {
     font-size: 4rem;
   }
@@ -215,15 +189,19 @@ input:focus {
 }
 
 @media screen and (min-width: 1024px) {
-  .signUp {
-    max-height: calc(100svh - 4rem);
-    overflow-y: auto;
-    margin: 2rem auto;
-    padding: 3rem 3rem 2rem;
-  }
   .form-sign-up-button {
     width: 100%;
     max-width: 48rem;
     margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .signUp {
+    max-width: 70rem;
+  }
+
+  .sign-up-content h1 {
+    font-size: 4.8rem;
   }
 }

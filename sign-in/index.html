@@ -15,37 +15,36 @@
     <link rel="stylesheet" href="./SignIn.css" />
   </head>
   <body>
-    <div class="signInContainer">
+    <div class="auth-page signInContainer">
       <!-- Return navigation to the landing page. -->
       <div class="nav-back">
         <a href="../index.html" class="back"
           ><i class="fas fa-chevron-left"></i> Back</a
         >
       </div>
-      <div class="welcome-back">
-        <div class="signIn">
-          <!-- Sign-in form and account recovery controls. -->
-          <div class="sign-in-content">
-            <h1>Welcome back</h1>
-          </div>
-          <div class="form-container">
-            <form method="post" class="sign-in-form">
-              <label for="email">Email</label>
-              <input
-                type="email"
-                name="email"
-                id="email"
-                required
-                placeholder="Enter Email"
-              />
-              <label for="password">Password</label>
-              <input
-                type="password"
-                name="password"
-                id="password"
-                required
-                placeholder="Enter Password"
-              />
+      <div class="auth-card signIn">
+        <!-- Sign-in form and account recovery controls. -->
+        <div class="sign-in-content">
+          <h1>Welcome back</h1>
+        </div>
+        <div class="form-container">
+          <form method="post" class="sign-in-form">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              required
+              placeholder="Enter Email"
+            />
+            <label for="password">Password</label>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              required
+              placeholder="Enter Password"
+            />
 
             <div class="flex-container content">
               <div class="input-checkbox">
@@ -64,27 +63,26 @@
             <div class="form-sign-in-button">
               <button type="submit" class="btn-sign-in">Sign in</button>
             </div>
-            </form>
+          </form>
 
-            <!-- Alternative sign-in methods and account registration link. -->
-            <div class="content-box">
-              <hr />
-              <p class="content-title">Sign in with</p>
-            </div>
-            <div class="icons">
-              <a href=""><i class="fab fa-facebook"></i></a>
-              <a href=""><i class="fab fa-twitter"></i></a>
-              <a href=""><i class="fab fa-google"></i></a>
-              <a href=""><i class="fab fa-apple"></i></a>
-            </div>
-
-            <p class="footer">
-              Don't have an account?
-              <a class="blue-link" href="../sign-up/index.html"
-                ><span class="blue">Sign up</span></a
-              >
-            </p>
+          <!-- Alternative sign-in methods and account registration link. -->
+          <div class="content-box">
+            <hr />
+            <p class="content-title">Sign in with</p>
           </div>
+          <div class="icons">
+            <a href=""><i class="fab fa-facebook"></i></a>
+            <a href=""><i class="fab fa-twitter"></i></a>
+            <a href=""><i class="fab fa-google"></i></a>
+            <a href=""><i class="fab fa-apple"></i></a>
+          </div>
+
+          <p class="footer">
+            Don't have an account?
+            <a class="blue-link" href="../sign-up/index.html"
+              ><span class="blue">Sign up</span></a
+            >
+          </p>
         </div>
       </div>
     </div>

@@ -3,6 +3,7 @@ body {
   font-size: 1.5rem;
   line-height: 1.5;
   position: relative;
+  overflow-y: hidden;
 }
 
 button {
@@ -30,47 +31,33 @@ button:hover a {
   color: #fff;
 }
 
-.welcome-back {
-  width: 100%;
-  height: fit-content;
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  max-height: 100svh;
-  overflow-y: auto;
-  margin-bottom: 0;
-  animation: slideUp 0.8s ease-out;
-}
-
 .signInContainer {
-  width: 100%;
-  min-height: 100svh;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  position: relative;
-  background-image: url("./img/bubble-bg.webp");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  overflow-y: auto;
+  height: 100svh;
+  min-height: 0;
+  overflow: hidden;
 }
 
 .signIn {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  padding: 3rem 2rem 1rem;
-  background: #fff;
-  border-radius: 1rem 1rem 0 0;
+  flex: 0 1 auto;
+  max-height: 100%;
+  overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.signIn::-webkit-scrollbar {
+  display: none;
 }
 
 .sign-in-content {
   text-align: center;
-  color: #5b5fef;
+  color: var(--color-primary);
   text-wrap: wrap;
   margin-bottom: 1rem;
+}
+
+.sign-in-content h1 {
+  padding: 1rem;
 }
 
 .sign-in-form {
@@ -157,18 +144,17 @@ input:is(:hover, :focus) {
   border-radius: 1rem;
 }
 
-
 @media screen and (max-width: 199px) {
   .flex-container {
     flex-wrap: wrap;
     row-gap: 0.25rem;
   }
-  
+
   .forgot {
     flex: 0 0 100%;
     width: 100%;
     margin-left: 0;
-    text-align: right;
+    text-align: left;
   }
 }
 
@@ -179,7 +165,7 @@ input:is(:hover, :focus) {
   }
 
   .signIn {
-    padding: 2rem 1rem 0.5rem;
+    padding: 0.5rem 1rem 0;
   }
 
   .sign-in-content h1 {
@@ -192,11 +178,23 @@ input:is(:hover, :focus) {
   }
 }
 
+@media screen and (max-width: 250px) {
+  .flex-container {
+    flex-wrap: wrap;
+    row-gap: 0;
+  }
+
+  .forgot {
+    flex: 0 0 100%;
+    width: 100%;
+    text-align: left;
+  }
+}
+
 @media screen and (min-width: 600px) and (max-width: 767px) {
   .signIn {
     width: min(90%, 62rem);
     margin: 0 auto;
-    padding: 3rem 2rem 1rem;
   }
 
   .sign-in-content h1 {
@@ -207,9 +205,7 @@ input:is(:hover, :focus) {
 @media screen and (min-width: 768px) {
   .signIn {
     width: min(82%, 62rem);
-    min-height: 68svh;
     margin: 0 auto;
-    padding: 4rem 3rem 2rem;
   }
 
   .sign-in-content h1 {
@@ -218,17 +214,11 @@ input:is(:hover, :focus) {
 }
 
 @media screen and (min-width: 1024px) {
-  .welcome-back {
-    margin-bottom: 0;
-  }
-
   .signIn {
     width: 100%;
     max-width: 60rem;
     min-height: 0;
-    max-height: calc(100svh - 6rem);
-    padding: 2rem 3rem 1rem;
-    border-radius: 1rem 1rem 0 0;
+    border-radius: 2rem 2rem 0 0;
   }
 
   .sign-in-content {
@@ -261,5 +251,30 @@ input:is(:hover, :focus) {
   .form-sign-in-button {
     max-width: 48rem;
     margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .signIn {
+    max-width: 70rem;
+  }
+
+  .sign-in-content h1 {
+    font-size: 4.8rem;
+  }
+}
+
+@media screen and (min-width: 1920px) and (min-height: 1080px) {
+  .signIn {
+    max-width: 80rem;
+  }
+
+  .sign-in-content h1 {
+    font-size: 5.6rem;
+  }
+
+  .sign-in-form input,
+  .sign-in-form label {
+    font-size: 1.8rem;
   }
 }

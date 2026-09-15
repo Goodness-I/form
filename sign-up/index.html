@@ -15,57 +15,56 @@
     <link rel="stylesheet" href="./SignUp.css" />
   </head>
   <body>
-    <div class="container landing-page">
+    <div class="auth-page signUpContainer">
       <!-- Return navigation to the landing page. -->
       <div class="nav-back">
         <a href="../index.html" class="back"
           ><i class="fas fa-chevron-left"></i> Back</a
         >
       </div>
-      <div class="get-started container">
-        <div class="signUp">
-          <!-- Account creation form and agreement controls. -->
-          <div class="sign-up-content">
-            <h1>Get Started</h1>
-          </div>
-          <div class="form-container">
-            <form method="post" class="sign-up-form">
-              <div class="input">
-                <label for="full-name">Full Name</label>
-                <input
-                  type="text"
-                  name="full_name"
-                  id="full-name"
-                  class="input-fields"
-                  required
-                  placeholder="Enter Full Name"
-                  autocomplete="name"
-                />
-              </div>
-              <div class="input">
-                <label for="email">Email</label>
-                <input
-                  type="email"
-                  name="email"
-                  id="email"
-                  required
-                  class="input-fields"
-                  placeholder="Enter Email"
-                  autocomplete="email"
-                />
-              </div>
-              <div class="input">
-                <label for="password">Password</label>
-                <input
-                  type="password"
-                  name="password"
-                  id="password"
-                  class="input-fields"
-                  required
-                  placeholder="Enter Password"
-                  autocomplete="new-password"
-                />
-              </div>
+      <div class="auth-card signUp">
+        <!-- Account creation form and agreement controls. -->
+        <div class="sign-up-content">
+          <h1>Get Started</h1>
+        </div>
+        <div class="form-container">
+          <form method="post" class="sign-up-form">
+            <div class="input">
+              <label for="full-name">Full Name</label>
+              <input
+                type="text"
+                name="full_name"
+                id="full-name"
+                class="input-fields"
+                required
+                placeholder="Enter Full Name"
+                autocomplete="name"
+              />
+            </div>
+            <div class="input">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                required
+                class="input-fields"
+                placeholder="Enter Email"
+                autocomplete="email"
+              />
+            </div>
+            <div class="input">
+              <label for="password">Password</label>
+              <input
+                type="password"
+                name="password"
+                id="password"
+                class="input-fields"
+                required
+                placeholder="Enter Password"
+                autocomplete="new-password"
+              />
+            </div>
             <div class="agreement">
               <div class="checkbox">
                 <input
@@ -87,29 +86,28 @@
             <div class="form-sign-up-button">
               <button type="submit" class="btn-sign-up">Sign Up</button>
             </div>
-            </form>
+          </form>
 
-            <!-- Alternative sign-up methods and existing-account link. -->
-            <div class="footer">
-              <div class="content-box">
-                <hr />
-                <p class="content-title">Sign up with</p>
-              </div>
-              <div class="icons">
-                <a href=""><i class="fab fa-facebook"></i></a>
-                <a href=""><i class="fab fa-twitter"></i></a>
-                <a href=""><i class="fab fa-google"></i></a>
-                <a href=""><i class="fab fa-apple"></i></a>
-              </div>
+          <!-- Alternative sign-up methods and existing-account link. -->
+          <div class="footer">
+            <div class="content-box">
+              <hr />
+              <p class="content-title">Sign up with</p>
+            </div>
+            <div class="icons">
+              <a href=""><i class="fab fa-facebook"></i></a>
+              <a href=""><i class="fab fa-twitter"></i></a>
+              <a href=""><i class="fab fa-google"></i></a>
+              <a href=""><i class="fab fa-apple"></i></a>
+            </div>
 
-              <div class="account">
-                <p class="account-footer">
-                  Already have an account?
-                  <a class="blue-link" href="../sign-in/index.html"
-                    ><span class="blue">Sign in</span></a
-                  >
-                </p>
-              </div>
+            <div class="account">
+              <p class="account-footer">
+                Already have an account?
+                <a class="blue-link" href="../sign-in/index.html"
+                  ><span class="blue">Sign in</span></a
+                >
+              </p>
             </div>
           </div>
         </div>
