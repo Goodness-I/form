@@ -129,13 +129,28 @@ input:focus {
     max-height: none;
   }
 
+  .sign-up-content h1 {
+    padding: 1rem;
+  }
+
   .form-container {
+    padding-top: 1rem;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
   }
 
+  .input {
+    padding: 0 0.5rem;
+  }
+
   .agreement {
+    margin: 1rem auto;
     font-size: 1.2rem;
+  }
+
+  .btn-sign-up {
+    padding: 0.75rem 1rem;
+    margin: 1rem 0;
   }
 }
 
@@ -145,7 +160,7 @@ input:focus {
   }
 
   .signUp {
-    width: 100%;
+    width: min(90%, 62rem);
     max-width: 60rem;
     min-height: 0;
   }
@@ -156,6 +171,11 @@ input:focus {
 }
 
 @media screen and (min-width: 768px) {
+  .signUp {
+    width: min(82%, 62rem);
+    margin: 0 auto;
+  }
+
   .sign-up-content h1 {
     font-size: 4rem;
   }
@@ -189,6 +209,11 @@ input:focus {
 }
 
 @media screen and (min-width: 1024px) {
+  .signUp {
+    width: 100%;
+    max-width: 60rem;
+  }
+
   .form-sign-up-button {
     width: 100%;
     max-width: 48rem;
@@ -198,7 +223,7 @@ input:focus {
 
 @media screen and (min-width: 1200px) {
   .signUp {
-    max-width: 70rem;
+    max-width: 60rem;
   }
 
   .sign-up-content h1 {

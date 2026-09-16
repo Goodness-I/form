@@ -68,7 +68,8 @@ button:hover a {
 }
 
 input {
-  padding: 1.5rem;
+  width: 100%;
+  padding: 1rem;
   border: 0.5px solid var(--color-border);
   border-radius: 8px;
 }
@@ -124,22 +125,24 @@ input:is(:hover, :focus) {
   background-color: var(--color-primary);
   color: #fff;
   text-align: center;
-  padding: 0.75rem 1rem;
+  padding: 1rem 1.5rem;
   font-size: 1.6rem;
 }
 
 .form-sign-in-button {
-  width: 100%;
+  margin-left: -1rem;
+  width: calc(100% + 2rem);
 }
 
 .btn-sign-in {
   width: 100%;
+  box-sizing: border-box;
   font-size: 1.2rem;
   cursor: pointer;
   background-color: var(--color-primary);
   display: block;
   text-align: center;
-  padding: 0.75rem 1rem;
+  padding: 1rem 1.5rem;
   margin: 1rem 0;
   border-radius: 1rem;
 }
@@ -239,24 +242,24 @@ input:is(:hover, :focus) {
   }
 
   .btn-sign-in {
-    padding: 0.75rem 1rem;
+    padding: 1rem 1.5rem;
     margin: 1rem 0;
   }
 
   .form-sign-in-button button {
-    padding: 0.75rem 1rem;
+    padding: 1rem 1.5rem;
     font-size: 1.6rem;
   }
 
   .form-sign-in-button {
-    max-width: 48rem;
-    margin: 0 auto;
+    max-width: none;
+    margin-left: -1rem;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .signIn {
-    max-width: 70rem;
+    max-width: 60rem;
   }
 
   .sign-in-content h1 {
@@ -266,7 +269,7 @@ input:is(:hover, :focus) {
 
 @media screen and (min-width: 1920px) and (min-height: 1080px) {
   .signIn {
-    max-width: 80rem;
+    max-width: 60rem;
   }
 
   .sign-in-content h1 {
