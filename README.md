@@ -35,4 +35,4 @@ This project is a clean authentication interface for introducing users to an emp
 
 ## Author
 
-Goodness Iroanya
+Iroanya, Goodness
